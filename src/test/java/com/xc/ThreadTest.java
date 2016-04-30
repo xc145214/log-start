@@ -14,9 +14,6 @@
  */
 package com.xc;
 
-import com.xc.concurrent.guarded.Consumer;
-import com.xc.concurrent.guarded.Drop;
-import com.xc.concurrent.guarded.Producer;
 import com.xc.concurrent.sync.Counter;
 import com.xc.concurrent.thread.HelloRunnable;
 import com.xc.concurrent.thread.HelloThread;

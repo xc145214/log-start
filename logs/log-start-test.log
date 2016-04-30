@@ -1,14 +1,24 @@
-2016-04-29 15:33:00.284 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - Mares eat oats
-2016-04-29 15:33:00.284 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - Mares eat oats
-2016-04-29 15:33:04.299 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - Does eat oats
-2016-04-29 15:33:04.299 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - Does eat oats
-2016-04-29 15:33:08.300 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - Little lambs eat ivy
-2016-04-29 15:33:08.300 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - Little lambs eat ivy
-2016-04-29 15:33:12.302 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - A kid will eat ivy too
-2016-04-29 15:33:12.302 [ main ] - [ INFO  ] [ com.xc.concurrent.thread.SleepMessages : 46 ] - A kid will eat ivy too
-2016-04-29 16:43:30.798 [ main ] - [ INFO  ] [ com.xc.reflection.ReflectionClasses : 35 ] - 类名：
-2016-04-29 16:43:30.798 [ main ] - [ INFO  ] [ com.xc.reflection.ReflectionClasses : 35 ] - 类名：
-2016-04-29 16:45:50.876 [ main ] - [ INFO  ] [ com.xc.reflection.ReflectionClasses : 35 ] - class name:
-2016-04-29 16:45:50.876 [ main ] - [ INFO  ] [ com.xc.reflection.ReflectionClasses : 35 ] - class name:
-2016-04-29 16:52:38.700 [ main ] - [ INFO  ] [ com.xc.reflection.ReflectionClasses : 34 ] - class name:
-2016-04-29 16:52:38.700 [ main ] - [ INFO  ] [ com.xc.reflection.ReflectionClasses : 34 ] - class name:
+2016-04-30 11:35:14.173 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 35 ] -  optional:true
+2016-04-30 11:35:14.173 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 35 ] -  optional:true
+2016-04-30 11:35:14.207 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 36 ] - get:5
+2016-04-30 11:35:14.207 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 36 ] - get:5
+2016-04-30 11:37:36.692 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 41 ] -  optional:false
+2016-04-30 11:37:36.692 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 41 ] -  optional:false
+2016-04-30 11:39:11.996 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 41 ] -  optional:false
+2016-04-30 11:39:11.996 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 41 ] -  optional:false
+2016-04-30 11:39:12.001 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 35 ] -  optional:true
+2016-04-30 11:39:12.001 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 35 ] -  optional:true
+2016-04-30 11:39:12.002 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 36 ] - get:5
+2016-04-30 11:39:12.002 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 36 ] - get:5
+2016-04-30 11:42:18.634 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 46 ] - check null
+2016-04-30 11:42:18.634 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 46 ] - check null
+2016-04-30 11:42:40.751 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 46 ] - check null 1
+2016-04-30 11:42:40.751 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 46 ] - check null 1
+2016-04-30 13:05:09.552 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 52 ] - object equal:true
+2016-04-30 13:05:09.552 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 52 ] - object equal:true
+2016-04-30 13:05:09.556 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 53 ] - object equal:false
+2016-04-30 13:05:09.556 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 53 ] - object equal:false
+2016-04-30 13:05:09.557 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 54 ] - object equal:false
+2016-04-30 13:05:09.557 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 54 ] - object equal:false
+2016-04-30 13:05:09.557 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 55 ] - object equal:true
+2016-04-30 13:05:09.557 [ main ] - [ INFO  ] [ com.xc.GuavaTest : 55 ] - object equal:true
