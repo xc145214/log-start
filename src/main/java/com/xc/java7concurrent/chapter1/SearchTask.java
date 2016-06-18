@@ -12,7 +12,7 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
 
 import java.util.Date;
 import java.util.Random;

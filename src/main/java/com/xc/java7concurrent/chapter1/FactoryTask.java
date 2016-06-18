@@ -12,22 +12,26 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
+
+import java.util.concurrent.TimeUnit;
 
 /**
- *  非检查异常处理类。
+ *  工厂任务。
  *
- *  @author xiachuan at 2016/6/17 16:45。
+ *  @author xiachuan at 2016/6/18 16:03。
  */
 
-public class ExceptionHandler implements Thread.UncaughtExceptionHandler{
+public class FactoryTask implements Runnable {
+
+
     @Override
-    public void uncaughtException(Thread t, Throwable e) {
-        System.out.printf("An exception has been captured\n");
-        System.out.printf("Thread: %s\n",t.getId());
-        System.out.printf("Exception: %s: %s\n",e.getClass().getName(),e.getMessage());
-        System.out.printf("Stack Trace: \n");
-        e.printStackTrace(System.out); System.out.printf("Thread status: %s\n",t.getState());
+    public void run() {
+        try {
+            TimeUnit.SECONDS.sleep(1);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
     }
 }
 

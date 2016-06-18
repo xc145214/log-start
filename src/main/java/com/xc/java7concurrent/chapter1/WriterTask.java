@@ -12,25 +12,40 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
 
+
+
+
+import java.util.Date;
+import java.util.Deque;
 import java.util.concurrent.TimeUnit;
 
 /**
- *  工厂任务。
+ *  守护线程的创建和运行。
  *
- *  @author xiachuan at 2016/6/18 16:03。
+ *  @author xiachuan at 2016/6/17 16:05。
  */
 
-public class FactoryTask implements Runnable {
+public class WriterTask implements Runnable {
+    private Deque<Event> deque;
 
+    public WriterTask(Deque<Event> deque) {
+        this.deque = deque;
+    }
 
     @Override
     public void run() {
-        try {
-            TimeUnit.SECONDS.sleep(1);
-        } catch (InterruptedException e) {
-            e.printStackTrace();
+        for (int i=1; i<100; i++) {
+            Event event=new Event();
+            event.setDate(new Date());
+            event.setEvent(String.format("The thread %s has generated an   event", Thread.currentThread().getId()));
+            deque.addFirst(event);
+            try {
+                TimeUnit.SECONDS.sleep(1);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
     }
 }

@@ -12,37 +12,46 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
-
-
-
+package com.xc.java7concurrent.chapter1;
 
 import java.util.Date;
-import java.util.Deque;
 import java.util.concurrent.TimeUnit;
 
 /**
- *  守护线程的创建和运行。
+ *  使用本地线程变量。
  *
- *  @author xiachuan at 2016/6/17 16:05。
+ *  @author xiachuan at 2016/6/17 16:50。
  */
 
-public class WriterTask implements Runnable {
-    private Deque<Event> deque;
+public class UnsafeTask implements Runnable {
 
-    public WriterTask(Deque<Event> deque) {
-        this.deque = deque;
-    }
+    private Date startDate;
+
+
 
     @Override
     public void run() {
-        for (int i=1; i<100; i++) {
-            Event event=new Event();
-            event.setDate(new Date());
-            event.setEvent(String.format("The thread %s has generated an   event", Thread.currentThread().getId()));
-            deque.addFirst(event);
+        startDate = new Date();
+        System.out.printf("Starting thread: %s : %s\n",Thread.currentThread().getId(),startDate);
+
+        try {
+            TimeUnit.SECONDS.sleep((int) Math.rint(Math.random()*10));
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.printf("Thread finished: %s : %s\n",Thread.currentThread().getId(),startDate);
+    }
+
+
+    public static void main(String[] args) {
+        UnsafeTask task = new UnsafeTask();
+        for (int i = 0; i <10 ; i++) {
+            Thread thread = new Thread(task);
+            thread.start();
+
             try {
-                TimeUnit.SECONDS.sleep(1);
+                TimeUnit.SECONDS.sleep(2);
             } catch (InterruptedException e) {
                 e.printStackTrace();
             }

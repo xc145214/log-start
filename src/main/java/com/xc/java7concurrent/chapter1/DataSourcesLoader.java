@@ -12,50 +12,49 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- *  使用本地线程变量机制。
+ *  等待线程的终结。
  *
- *  @author xiachuan at 2016/6/17 17:15。
+ *  @author xiachuan at 2016/6/17 15:48。
  */
 
-public class SafeTask implements Runnable{
-    private static ThreadLocal<Date> startDate = new ThreadLocal<Date>(){
-        protected Date initialValue(){
-            return new Date();
-        }
-    };
+public class DataSourcesLoader implements Runnable {
     @Override
     public void run() {
-        System.out.printf("Starting thread: %s : %s\n",Thread.currentThread().getId(),startDate.get());
+        System.out.printf("Beginning data sources loading:%s\n",new Date());
 
         try {
-            TimeUnit.SECONDS.sleep((int) Math.rint(Math.random()*10));
+            TimeUnit.SECONDS.sleep(4);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
-        System.out.printf("Thread finished: %s : %s\n",Thread.currentThread().getId(),startDate.get());
-
+        System.out.printf("Data sources loading has finished");
     }
 
 
     public static void main(String[] args) {
-        SafeTask task = new SafeTask();
-        for (int i = 0; i <10 ; i++) {
-            Thread thread = new Thread(task);
-            thread.start();
+        DataSourcesLoader dsLoader = new DataSourcesLoader();
+        Thread thread1 = new Thread(dsLoader);
 
-            try {
-                TimeUnit.SECONDS.sleep(2);
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            }
+        NetWorkConnectionsLoader ncLoader = new NetWorkConnectionsLoader();
+        Thread thread2 = new Thread(ncLoader);
+
+        thread1.start();
+        thread2.start();
+
+        try {
+            thread1.join();
+            thread2.join();
+        } catch (InterruptedException e) {
+            e.printStackTrace();
         }
+
+        System.out.printf("Main: Configuration has been Loaded:%s\n",new Date());
     }
 }
 

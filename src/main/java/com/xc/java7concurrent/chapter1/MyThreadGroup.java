@@ -12,26 +12,26 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
 
 /**
- *  抛出非检查异常。
+ * 处理线程组里的异常。
  *
- *  @author xiachuan at 2016/6/17 16:46。
+ * @author xiachuan at 2016/6/18 15:42。
  */
 
-public class Task implements Runnable {
-    @Override
-    public void run() {
-        int numero=Integer.parseInt("TTT");
+public class MyThreadGroup extends ThreadGroup {
+
+    public MyThreadGroup(String name) {
+        super(name);
     }
 
-
-    public static void main(String[] args) {
-        Task task = new Task();
-        Thread thread = new Thread(task);
-        thread.setUncaughtExceptionHandler(new ExceptionHandler());
-        thread.start();
+    @Override
+    public void uncaughtException(Thread t, Throwable e) {
+        System.out.printf("Thread %s has thrown an Exception\n",t.getId());
+        e.printStackTrace();
+        System.out.printf("Terminating the rest of the Threads\n");
+        interrupt();
     }
 }
 

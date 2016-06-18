@@ -12,26 +12,28 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
+
+import java.util.Date;
+import java.util.concurrent.TimeUnit;
 
 /**
- * 处理线程组里的异常。
+ *  XXXXXXXXXXXXXXXXXXXXX
  *
- * @author xiachuan at 2016/6/18 15:42。
+ *  @author xiachuan at 2016/6/17 15:56。
  */
 
-public class MyThreadGroup extends ThreadGroup {
-
-    public MyThreadGroup(String name) {
-        super(name);
-    }
-
+public class NetWorkConnectionsLoader implements Runnable {
     @Override
-    public void uncaughtException(Thread t, Throwable e) {
-        System.out.printf("Thread %s has thrown an Exception\n",t.getId());
-        e.printStackTrace();
-        System.out.printf("Terminating the rest of the Threads\n");
-        interrupt();
+    public void run() {
+        System.out.printf("Beginning network connection:%s\n",new Date());
+
+        try {
+            TimeUnit.SECONDS.sleep(4);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+        System.out.printf("Network connection has finished");
     }
 }
 

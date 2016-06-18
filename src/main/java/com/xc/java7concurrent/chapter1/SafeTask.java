@@ -12,27 +12,26 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
 
 import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- *  使用本地线程变量。
+ *  使用本地线程变量机制。
  *
- *  @author xiachuan at 2016/6/17 16:50。
+ *  @author xiachuan at 2016/6/17 17:15。
  */
 
-public class UnsafeTask implements Runnable {
-
-    private Date startDate;
-
-
-
+public class SafeTask implements Runnable{
+    private static ThreadLocal<Date> startDate = new ThreadLocal<Date>(){
+        protected Date initialValue(){
+            return new Date();
+        }
+    };
     @Override
     public void run() {
-        startDate = new Date();
-        System.out.printf("Starting thread: %s : %s\n",Thread.currentThread().getId(),startDate);
+        System.out.printf("Starting thread: %s : %s\n",Thread.currentThread().getId(),startDate.get());
 
         try {
             TimeUnit.SECONDS.sleep((int) Math.rint(Math.random()*10));
@@ -40,12 +39,13 @@ public class UnsafeTask implements Runnable {
             e.printStackTrace();
         }
 
-        System.out.printf("Thread finished: %s : %s\n",Thread.currentThread().getId(),startDate);
+        System.out.printf("Thread finished: %s : %s\n",Thread.currentThread().getId(),startDate.get());
+
     }
 
 
     public static void main(String[] args) {
-        UnsafeTask task = new UnsafeTask();
+        SafeTask task = new SafeTask();
         for (int i = 0; i <10 ; i++) {
             Thread thread = new Thread(task);
             thread.start();

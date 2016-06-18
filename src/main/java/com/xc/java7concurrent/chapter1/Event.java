@@ -12,24 +12,46 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.java7concurrent.chapte1;
+package com.xc.java7concurrent.chapter1;
+
+import java.util.Date;
 
 /**
- *  保存线程名字。
+ *  事件。
  *
- *  @author xiachuan at 2016/6/17 17:25。
+ *  @author xiachuan at 2016/6/17 16:36。
  */
 
-public class Result {
+public class Event {
 
-    private String name;
-
-    public String getName() {
-        return name;
+    public Event() {
     }
 
-    public void setName(String name) {
-        this.name = name;
+    private String event;
+    private Date date;
+
+    public String getEvent() {
+        return event;
+    }
+
+    public void setEvent(String event) {
+        this.event = event;
+    }
+
+    public Date getDate() {
+        return date;
+    }
+
+    public void setDate(Date date) {
+        this.date = date;
+    }
+
+    @Override
+    public String toString() {
+        return "Event{" +
+                "event='" + event + '\'' +
+                ", date=" + date +
+                '}';
     }
 }
 
