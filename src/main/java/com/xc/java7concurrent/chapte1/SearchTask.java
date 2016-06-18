@@ -20,7 +20,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 线程组。
- *
+ * <p>
+ *     开发一个简单的例子来学习 ThreadGroup 对象。我们有 10 个随机时间休眠的线程 (例如，模拟搜索)，然后当其中一个完成，就中断其余的。
+ * </p>
  * @author xiachuan at 2016/6/17 17:24。
  */
 

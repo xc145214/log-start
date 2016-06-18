@@ -19,7 +19,9 @@ import java.util.concurrent.TimeUnit;
 
 /**
  * 线程的休眠与恢复。
- *
+ * <p>
+ *     将开发一个程序使用sleep()方法来每秒写入真实的日期。
+ * </p>
  * @author xiachuan at 2016/6/17 15:37。
  */
 

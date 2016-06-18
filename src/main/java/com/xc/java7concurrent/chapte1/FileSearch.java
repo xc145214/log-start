@@ -18,7 +18,10 @@ import java.io.File;
 import java.util.concurrent.TimeUnit;
 
 /**
- * 使用InterruptedException异常来控制线程的中断
+ * 使用InterruptedException异常来控制线程的中断。
+ * <p>
+ *     将实现的线程会根据给定的名称在文件件和子文件夹里查找文件，这个将展示如何使用InterruptedException异常来控制线程的中断。
+ * </p>
  *
  * @author xiachuan at 2016/6/17 15:23。
  */

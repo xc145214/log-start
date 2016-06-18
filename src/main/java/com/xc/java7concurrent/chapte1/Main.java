@@ -20,7 +20,10 @@ import java.io.PrintWriter;
 import java.lang.Thread.State;
 
 /**
- * 应用入口。
+ * 获取和设置线程信息。
+ * <p>
+ *     将开发一个为10个线程设置名字和优先级的程序，然后展示它们的状态信息直到线程结束。这些线程会计算数字乘法表。
+ * </p>
  *
  * @author xiachuan at 2016/5/19 20:11。
  */

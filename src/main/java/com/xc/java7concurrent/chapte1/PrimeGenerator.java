@@ -15,8 +15,10 @@
 package com.xc.java7concurrent.chapte1;
 
 /**
- *  线程终止。
- *
+ *  线程的中断。
+ * <p>
+ *     开发一个程序，它创建线程，然后在5秒之后，它会使用中断机制来强制结束线程。
+ * </p>
  *  @author xiachuan at 2016/6/17 14:57。
  */
 

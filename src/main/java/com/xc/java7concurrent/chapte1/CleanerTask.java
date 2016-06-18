@@ -20,8 +20,10 @@ import java.util.Date;
 import java.util.Deque;
 
 /**
- *  XXXXXXXXXXXXXXXXXXXXX
- *
+ *  守护线程的创建和运行.
+ * <p>
+ *     学习如何创建一个守护线程，开发一个用2个线程的例子；我们的使用线程会写事件到queue, 守护线程会清除queue里10秒前创建的事件。
+ * </p>
  *  @author xiachuan at 2016/6/17 16:31。
  */
 
