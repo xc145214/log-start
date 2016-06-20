@@ -43,16 +43,15 @@ public class Account {
     }
 
 
-    public synchronized void subtractAmount(double amount){
+    public synchronized void subtractAmount(double amount) {
         double tmp = balance;
-
         try {
             Thread.sleep(10);
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
         tmp -= amount;
-        balance = amount;
+        balance = tmp;
     }
 }
 

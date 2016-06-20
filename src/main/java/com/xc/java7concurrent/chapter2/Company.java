@@ -15,12 +15,12 @@
 package com.xc.java7concurrent.chapter2;
 
 /**
- *  模拟公司，增加余额。
+ * 模拟公司，增加余额。
  *
- *  @author xiachuan at 2016/6/18 17:19。
+ * @author xiachuan at 2016/6/18 17:19。
  */
 
-public class Company implements Runnable{
+public class Company implements Runnable {
 
     private Account account;
 
@@ -31,7 +31,7 @@ public class Company implements Runnable{
     @Override
     public void run() {
 
-        for (int i = 0; i <100 ; i++) {
+        for (int i = 0; i < 100; i++) {
             account.addAmount(1000);
         }
     }
@@ -57,11 +57,11 @@ public class Company implements Runnable{
         try {
             companyThread.join();
             bankThread.join();
-            System.out.printf("Account : Final Balance: %f\n", account.getBalance());
+            System.out.printf("Account : Final Balance: %f\n", account.
+                    getBalance());
         } catch (InterruptedException e) {
             e.printStackTrace();
         }
-
     }
 }
 
