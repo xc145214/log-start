@@ -19,7 +19,6 @@ import java.util.concurrent.locks.ReentrantLock;
 
 /**
  * 使用Lock同步代码块。
- * <p/>
  * <p>
  * 通过锁来同步代码块和通过Lock接口及其实现者ReentrantLock类来创建临界区，实现一个程序来模拟打印队列。
  * </p>
@@ -70,6 +69,11 @@ public class PrintQueue {
 
         for (int i = 0; i < 10; i++) {
             threads[i].start();
+            try {
+                Thread.sleep(100);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
         }
 
 
