@@ -18,19 +18,20 @@ import java.util.concurrent.Executors;
 import java.util.concurrent.ThreadPoolExecutor;
 
 /**
- *   创建一个线程执行者.
- *  <p>
- *      学习如何使用这两种操作来实现一个web服务器的示例，这个web服务器用来处理各种客户端请求。
- *  </p>
- * @author xiachuan at 2016/6/22 19:01。
+ * 创建一个大小固定的线程执行者。
+ * <p>
+ * 学习怎样创建一个大小固定的线程执行者，然后修改本章第一个示例的实现。
+ * </p>
+ *
+ * @author xiachuan at 2016/6/23 10:56。
  */
 
-public class Server {
+public class FixServer {
 
     private ThreadPoolExecutor executor;
 
-    public Server() {
-        executor = (ThreadPoolExecutor) Executors.newCachedThreadPool();
+    public FixServer() {
+        executor = (ThreadPoolExecutor) Executors.newFixedThreadPool(5);
     }
 
     public void executeTask(Task task) {
@@ -52,9 +53,9 @@ public class Server {
         executor.shutdown();
     }
 
-
     public static void main(String[] args) {
-        Server server = new Server();
+
+        FixServer server = new FixServer();
 
         for (int i = 0; i < 100; i++) {
             Task task = new Task("Task " + i);
@@ -63,4 +64,6 @@ public class Server {
         }
         server.endServer();
     }
+
 }
+

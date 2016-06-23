@@ -18,10 +18,6 @@ import java.util.Date;
 import java.util.concurrent.TimeUnit;
 
 /**
- *  创建一个线程执行者.
- *  <p>
- *      学习如何使用这两种操作来实现一个web服务器的示例，这个web服务器用来处理各种客户端请求。
- *  </p>
  *
  *  @author xiachuan at 2016/6/22 18:58。
  */
