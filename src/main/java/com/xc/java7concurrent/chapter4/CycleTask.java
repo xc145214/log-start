@@ -32,13 +32,40 @@ public class CycleTask implements Runnable {
         System.out.printf("Main: Starting at: %s\n",new Date());
         CycleTask task = new CycleTask("Task");
 
+        /**
+         * scheduleAtFixedRate 的四个参数：
+         * 你想要周期性执行的任务、
+         * 第一次执行任务的延迟时间、
+         * 两次执行之间的间隔期间、
+         * 第2、3个参数的时间单位。
+         */
         ScheduledFuture result = executor.scheduleAtFixedRate(task,1, 2, TimeUnit.SECONDS);
 
+        for (int i=0; i<10; i++){
+            System.out.printf("Main: Delay: %d\n",result.
+                    getDelay(TimeUnit.MILLISECONDS));
+          //Sleep the thread during 500 milliseconds.
+            try {
+                TimeUnit.MILLISECONDS.sleep(500);
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            }
+        }
 
+        executor.shutdown();
+
+
+        try {
+            TimeUnit.SECONDS.sleep(5);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        }
+
+        System.out.printf("Main: Finished at: %s\n",new Date());
     }
 
     @Override
     public void run() {
-
+        System.out.printf("%s: Starting at : %s\n",name,new Date());
     }
 }
