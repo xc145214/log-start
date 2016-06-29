@@ -35,6 +35,13 @@ public class ScheduleTask implements Callable<String> {
 
         for (int i = 0; i < 5; i++) {
             ScheduleTask task = new ScheduleTask("Task "+i);
+
+            /**
+             * 三个参数：
+             * 你想要执行的任务
+             * 你想要让任务在执行前等待多长时间
+             * 时间单位，指定为TimeUnit类的常数
+             */
             executor.schedule(task,i+1,TimeUnit.SECONDS);
         }
 
