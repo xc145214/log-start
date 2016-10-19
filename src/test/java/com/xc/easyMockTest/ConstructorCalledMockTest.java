@@ -88,6 +88,7 @@ public class ConstructorCalledMockTest   extends EasyMockSupport {
          */
         replayAll();
 
+        //验证结果
         assertEquals(new BigDecimal("4.00"), tc.tax());
 
     }
