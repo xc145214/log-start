@@ -7,3 +7,7 @@ sample demos
 + guava
 + 反射
 + java 7 并发编程
++ EasyMock
++ httpClient
++ nio
++ immutable
