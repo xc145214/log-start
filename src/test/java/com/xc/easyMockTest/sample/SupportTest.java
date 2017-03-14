@@ -12,10 +12,10 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.easyMockTest;
+package com.xc.easyMockTest.sample;
 
-import com.xc.easyMock.ClassTested;
-import com.xc.easyMock.Collaborator;
+import com.xc.easyMock.sample.ClassTested;
+import com.xc.easyMock.sample.Collaborator;
 import org.easymock.EasyMockSupport;
 import org.easymock.IMocksControl;
 import org.junit.After;

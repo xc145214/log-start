@@ -12,7 +12,7 @@
  * HONGLING CAPITAL CONFIDENTIAL AND PROPRIETARY
  * ***********************************************************************
  */
-package com.xc.easyMock;
+package com.xc.easyMock.sample;
 
 /**
  *  待测试的借口。
