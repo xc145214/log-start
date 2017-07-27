@@ -1,16 +1,20 @@
 package com.xc;
 
+import org.slf4j.LoggerFactory;
+
 /**
  * Hello world!
  */
 public class App {
-    public static void main(String[] args) {
-
-        int userNum = args.length>1?Integer.valueOf(args[1]):100;
-
-        System.out.println(userNum);
+    public static void main(String[] args) throws InterruptedException {
 
 
-        System.out.println("Hello World!");
+        org.slf4j.Logger LOG = LoggerFactory.getLogger(App.class);
+
+
+        for (int i = 0; i < 10000; i++) {
+            LOG.error("Info log [" + i + "].");
+            Thread.sleep(500);
+        }
     }
 }
