@@ -120,9 +120,11 @@ public class AesUtil {
         String data = "AES数据";
         System.out.println("加密前数据: string:" + data);
         System.out.println("加密前数据: byte[]:" + showByteArray(data.getBytes()));
+        System.out.println("加密前数据: byte[]:" + showByteArray(data.getBytes()));
         System.out.println();
         byte[] encryptData = encrypt(data.getBytes(), k);//数据加密
         System.out.println("加密后数据: byte[]:" + showByteArray(encryptData));
+        System.out.println("加密后数据: byte[]:" + new String(encryptData).getBytes("utf-8"));
 //       System.out.println("加密后数据: hexStr:"+Hex.encodeHexStr(encryptData));
         System.out.println();
         byte[] decryptData = decrypt(encryptData, k);//数据解密

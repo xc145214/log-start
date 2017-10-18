@@ -12,12 +12,21 @@
  *************************************************************************/
 package com.xc.okHttp;
 
+import okhttp3.Headers;
+import okhttp3.OkHttpClient;
+import okhttp3.Request;
+import okhttp3.Response;
+
+import java.io.IOException;
+
 /**
- * XXXXXXXXXXXXXXXXXXXXX
  *
  * @author xiachuan at 2017/8/2 15:27。
  */
 
 public class Recipies {
+
+
+
 }
 

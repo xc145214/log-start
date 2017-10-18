@@ -12,9 +12,11 @@ public class App {
         org.slf4j.Logger LOG = LoggerFactory.getLogger(App.class);
 
 
-        for (int i = 0; i < 10000; i++) {
-            LOG.error("Info log [" + i + "].");
-            Thread.sleep(500);
-        }
+//        for (int i = 0; i < 10000; i++) {
+//            LOG.error("Info log [" + i + "].");
+//            Thread.sleep(500);
+//        }
+
+        System.out.println(Integer.valueOf(1).equals(1));
     }
 }

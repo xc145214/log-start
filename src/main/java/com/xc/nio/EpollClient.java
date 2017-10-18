@@ -21,20 +21,24 @@ import java.nio.channels.SocketChannel;
  *
  * @author xiachuan at 2017/8/31 18:30。
  */
-public class NetClient {
+public class EpollClient {
     public static void main(String[] args) {
         try {
             SocketChannel socketChannel = SocketChannel.open();
             socketChannel.connect(new InetSocketAddress("127.0.0.1", 8001));
 
-            socketChannel.configureBlocking(true);
+            ByteBuffer writeBuffer = ByteBuffer.allocate(32);
+            ByteBuffer readBuffer = ByteBuffer.allocate(32);
 
-            ByteBuffer writeBuffer = ByteBuffer.allocate(1024);
-            writeBuffer.put("hello world!".getBytes());
+            writeBuffer.put("hello".getBytes());
             writeBuffer.flip();
 
-            socketChannel.write(writeBuffer);
-            socketChannel.close();
+            while (true) {
+                writeBuffer.rewind();
+                socketChannel.write(writeBuffer);
+                readBuffer.clear();
+                socketChannel.read(readBuffer);
+            }
         } catch (IOException e) {
         }
     }
