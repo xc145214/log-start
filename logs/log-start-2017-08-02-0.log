@@ -1,0 +1,86 @@
+2017-08-02 16:41:50.393 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 38 ] - Sending request http://www.publicobject.com/helloworld.txt on null
+User-Agent: OkHttp Example
+
+2017-08-02 16:41:50.393 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 38 ] - Sending request http://www.publicobject.com/helloworld.txt on null
+User-Agent: OkHttp Example
+
+2017-08-02 16:41:52.528 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 44 ] - Received response for https://publicobject.com/helloworld.txt in 2136.5ms
+Server: nginx/1.10.0 (Ubuntu)
+Date: Wed, 02 Aug 2017 08:41:52 GMT
+Content-Type: text/plain
+Content-Length: 1759
+Last-Modified: Tue, 27 May 2014 02:35:47 GMT
+Connection: keep-alive
+ETag: "5383fa03-6df"
+Accept-Ranges: bytes
+
+2017-08-02 16:41:52.528 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 44 ] - Received response for https://publicobject.com/helloworld.txt in 2136.5ms
+Server: nginx/1.10.0 (Ubuntu)
+Date: Wed, 02 Aug 2017 08:41:52 GMT
+Content-Type: text/plain
+Content-Length: 1759
+Last-Modified: Tue, 27 May 2014 02:35:47 GMT
+Connection: keep-alive
+ETag: "5383fa03-6df"
+Accept-Ranges: bytes
+
+2017-08-02 16:43:41.519 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 38 ] - Sending request http://www.publicobject.com/helloworld.txt on Connection{www.publicobject.com:80, proxy=DIRECT hostAddress=www.publicobject.com/54.187.32.157:80 cipherSuite=none protocol=http/1.1}
+User-Agent: OkHttp Example
+Host: www.publicobject.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+2017-08-02 16:43:41.519 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 38 ] - Sending request http://www.publicobject.com/helloworld.txt on Connection{www.publicobject.com:80, proxy=DIRECT hostAddress=www.publicobject.com/54.187.32.157:80 cipherSuite=none protocol=http/1.1}
+User-Agent: OkHttp Example
+Host: www.publicobject.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+2017-08-02 16:43:41.721 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 44 ] - Received response for http://www.publicobject.com/helloworld.txt in 206.5ms
+Server: nginx/1.10.0 (Ubuntu)
+Date: Wed, 02 Aug 2017 08:43:41 GMT
+Content-Type: text/html
+Content-Length: 194
+Connection: keep-alive
+Location: https://publicobject.com/helloworld.txt
+
+2017-08-02 16:43:41.721 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 44 ] - Received response for http://www.publicobject.com/helloworld.txt in 206.5ms
+Server: nginx/1.10.0 (Ubuntu)
+Date: Wed, 02 Aug 2017 08:43:41 GMT
+Content-Type: text/html
+Content-Length: 194
+Connection: keep-alive
+Location: https://publicobject.com/helloworld.txt
+
+2017-08-02 16:43:42.650 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 38 ] - Sending request https://publicobject.com/helloworld.txt on Connection{publicobject.com:443, proxy=DIRECT hostAddress=publicobject.com/54.187.32.157:443 cipherSuite=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA protocol=http/1.1}
+User-Agent: OkHttp Example
+Host: publicobject.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+2017-08-02 16:43:42.650 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 38 ] - Sending request https://publicobject.com/helloworld.txt on Connection{publicobject.com:443, proxy=DIRECT hostAddress=publicobject.com/54.187.32.157:443 cipherSuite=TLS_ECDHE_RSA_WITH_AES_128_CBC_SHA protocol=http/1.1}
+User-Agent: OkHttp Example
+Host: publicobject.com
+Connection: Keep-Alive
+Accept-Encoding: gzip
+
+2017-08-02 16:43:42.841 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 44 ] - Received response for https://publicobject.com/helloworld.txt in 190.5ms
+Server: nginx/1.10.0 (Ubuntu)
+Date: Wed, 02 Aug 2017 08:43:42 GMT
+Content-Type: text/plain
+Content-Length: 1759
+Last-Modified: Tue, 27 May 2014 02:35:47 GMT
+Connection: keep-alive
+ETag: "5383fa03-6df"
+Accept-Ranges: bytes
+
+2017-08-02 16:43:42.841 [ main ] - [ INFO  ] [ com.xc.httpClient.LoggingInterceptor : 44 ] - Received response for https://publicobject.com/helloworld.txt in 190.5ms
+Server: nginx/1.10.0 (Ubuntu)
+Date: Wed, 02 Aug 2017 08:43:42 GMT
+Content-Type: text/plain
+Content-Length: 1759
+Last-Modified: Tue, 27 May 2014 02:35:47 GMT
+Connection: keep-alive
+ETag: "5383fa03-6df"
+Accept-Ranges: bytes
+
